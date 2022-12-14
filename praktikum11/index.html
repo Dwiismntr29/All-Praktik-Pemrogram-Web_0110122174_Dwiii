@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("select").value;
+            const list_image = ["unicorn.jpg", "unicorn1.jpg", "unicorn2.jpg", "unicorn3.jpg", "unicorn4.jpg", "unicorn5.jpg"];
+            if(pilihan == "unicorn"){
+                let select = list_image[0];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan == "unicorn1"){
+                let select = list_image[1];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan == "unicorn2"){
+                let select = list_image[2];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan == "unicorn3"){
+                let select = list_image[3];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan == "unicorn4"){
+                let select = list_image[4];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan == "unicorn5"){
+                let select = list_image[5];
+                document.getElementById("image").src = `image/${select}`
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="select" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="unicorn">Unicorn</option>
+        <option value="unicorn1">Unicorn1</option>
+        <option value="unicorn2">Unicorn2</option>
+        <option value="unicorn3">Unicorn3</option>
+        <option value="unicorn4">Unicorn4</option>
+        <option value="unicorn5">Unicorn5</option>
+    </select>
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="image">
+        </div>
+    </div>
+</body>
+</html>
